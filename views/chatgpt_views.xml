@@ -1,0 +1,27 @@
+<odoo>
+    <record id="view_chatgpt_connector_form" model="ir.ui.view">
+        <field name="name">chatgpt.connector.form</field>
+        <field name="model">chatgpt.connector</field>
+        <field name="arch" type="xml">
+            <form string="ChatGPT Connector">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="api_key"/>
+                    </group>
+                    <group>
+                        <field name="conversation_history" widget="one2many"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_chatgpt_connector" model="ir.actions.act_window">
+        <field name="name">ChatGPT Connector</field>
+        <field name="res_model">chatgpt.connector</field>
+        <field name="view_mode">form</field>
+    </record>
+
+    <menuitem id="menu_chatgpt_connector" name="ChatGPT Integration" parent="base.menu_custom" action="action_chatgpt_connector"/>
+</odoo>

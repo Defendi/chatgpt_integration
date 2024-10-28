@@ -1,0 +1,7 @@
+<odoo>
+    <record id="mail_channel_chatgpt" model="mail.channel">
+        <field name="name">ChatGPT</field>
+        <field name="public">public</field>
+        <field name="description">Channel for ChatGPT Conversations</field>
+    </record>
+</odoo>
